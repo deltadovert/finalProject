@@ -1,0 +1,20 @@
+float const yLength = (// length of y track);
+float const yRad = (// radius of y gear);
+float const motorYSpeed = (// speed of y motor);
+
+float yDist() {
+  while(// does not detect colour) {
+      nMotorEncoder[motorB] = 0;
+      float dist = 0;
+      dist = nMotorEncoder[motorA] * 180 / (PI * yRad);
+      while(nMotorEncoder[motorA] < yLength) 
+        motor[motorA] = motorYSpeed;
+      nMotorEncoder[motorB] = 0;
+      while(nMotorEncoder[motorA] > -yLength) 
+        motor[motorA] = -motorYSpeed;
+      return 0;
+  }
+  return dist;
+}
+
+  
